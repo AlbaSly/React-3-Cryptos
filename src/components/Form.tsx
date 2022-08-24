@@ -2,7 +2,7 @@ import { Dispatch, FormEvent, SetStateAction, useEffect, useState } from 'react'
 
 import styled from '@emotion/styled';
 
-import { Alert } from './Alert';
+import Alert from './Alert';
 
 import useCurrencySelect from '../hooks/useCurrencySelect';
 
