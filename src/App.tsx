@@ -103,6 +103,7 @@ const App = (): JSX.Element => {
       $img.classList.add('img-from-left');
     }
   }
+
   return (
     <Container>
       <Image src={CryptoImg}></Image>
