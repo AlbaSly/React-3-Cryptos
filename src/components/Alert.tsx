@@ -15,7 +15,7 @@ const Info = styled.div`
     margin: 10px auto;
 `;
 
-export const Alert = (props: AlertComponentProps): JSX.Element => {
+const Alert = (props: AlertComponentProps): JSX.Element => {
     const {alertInfoState: {alertInfo, setAlertInfo}} = props;
 
     useEffect(() => {
@@ -27,8 +27,10 @@ export const Alert = (props: AlertComponentProps): JSX.Element => {
     }, [alertInfo]);
 
     return (
-        <Info>
+        <Info className="fade">
             <p>{alertInfo}</p>
         </Info>
     );
 }
+
+export default Alert;
