@@ -1,3 +1,46 @@
 body {
   background-color: #0D2235;
+  overflow-x: hidden;
+}
+
+.img-from-left {
+  animation: from-left .8s ease-in-out, infinite-fade 4s ease-in infinite;
+}
+
+.fade {
+  animation: fade .5s ease-in;
+}
+
+@keyframes infinite-fade {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes from-left {
+  from {
+    left: -100vw;
+  }
+
+  to {
+      left: 50%;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
