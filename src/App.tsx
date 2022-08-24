@@ -50,6 +50,11 @@ const Heading = styled.h1`
 `;
 
 const App = (): JSX.Element => {
+  const [trade, setTrade]: [ITrade, Dispatch<SetStateAction<ITrade>>]  = useState(DefaulTradeState);
+  const [result, setResult]: [GlobalCurrency, Dispatch<SetStateAction<GlobalCurrency>>] = useState(DefaultGlobalCurrencyState);
+  const [loading, setLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false);
+  const [alertInfo, setAlertInfo]: [string, Dispatch<SetStateAction<string>>] = useState('');
+
   useEffect(() => {
     if (Object.values(trade).some(val => val === '' || !val)) return;
 
