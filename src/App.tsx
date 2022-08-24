@@ -1,6 +1,20 @@
 const App = (): JSX.Element => {
   return (
-    <h1>Hola Mundo</h1>
+    <Container>
+      <Image src={CryptoImg}></Image>
+      
+      <div>
+        <Heading>Trade your cryptos</Heading>
+
+        <Form tradeState={{trade, setTrade}} />
+        
+        {loading && <Spinner />}
+
+        {result.PRICE && <Result resultState={{result, setResult}} />}
+        {alertInfo && <Alert alertInfoState={{alertInfo, setAlertInfo}} />}
+      </div>
+
+    </Container>
   );
 }
 
