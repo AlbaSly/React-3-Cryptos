@@ -1,3 +1,15 @@
+import styled from '@emotion/styled';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+
+import Form from './components/Form';
+import Result from './components/Result';
+import Spinner from './components/Spinner/Spinner';
+
+import { DefaultGlobalCurrencyState, GlobalCurrency, TradeData } from './interfaces/api.interface';
+import { DefaulTradeState, ITrade } from './interfaces/state.interface';
+
+import CryptoImg from './img/imagen-criptos.png';
+import Alert from './components/Alert';
 
 const Container = styled.div`
   font-family: 'Lato', sans-serif;
