@@ -56,6 +56,8 @@ const App = (): JSX.Element => {
   const [alertInfo, setAlertInfo]: [string, Dispatch<SetStateAction<string>>] = useState('');
 
   useEffect(() => {
+    setResult(DefaultGlobalCurrencyState);
+
     if (Object.values(trade).some(val => val === '' || !val)) return;
 
     async function GetCoinsComparison(): Promise<void> {
